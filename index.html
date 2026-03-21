@@ -24,176 +24,440 @@
       a {
         color: #0b57d0;
       }
+      .lang-switcher {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .lang-btn {
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #222;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+      .lang-btn.active {
+        border-color: #0b57d0;
+        background: #eaf1ff;
+        color: #0b57d0;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
-    <h1>Privacy Policy</h1>
-    <p class="muted"><strong>Last updated:</strong> 2026-03-21</p>
+    <div class="lang-switcher">
+      <button id="btn-en" class="lang-btn active" type="button">English</button>
+      <button id="btn-sr" class="lang-btn" type="button">Srpski</button>
+    </div>
 
-    <p>
+    <h1 id="title">Privacy Policy</h1>
+    <p id="lastUpdated" class="muted">
+      <strong>Last updated:</strong> 2026-03-21
+    </p>
+
+    <p id="intro">
       This Privacy Policy explains how <strong>Engleski Fudbal</strong> ("we",
       "our", or "us") collects, uses, and protects your information when you use
       the <strong>Engleski Fudbal</strong> mobile application.
     </p>
 
-    <h2>1. Who We Are</h2>
-    <p>
+    <h2 id="h2-1">1. Who We Are</h2>
+    <p id="p-1">
       App owner and legal entity: <strong>Engleski Fudbal</strong><br />
       Contact email: <strong>engleski.fudbal@gmail.com</strong>
     </p>
 
-    <h2>2. Information We Collect</h2>
+    <h2 id="h2-2">2. Information We Collect</h2>
     <ul>
-      <li>
+      <li id="li-2-1">
         <strong>Account Information (Firebase Authentication):</strong> Email
         address, authentication identifiers, and account status (for example,
         whether your email is verified).
       </li>
-      <li>
+      <li id="li-2-2">
         <strong>Profile Information (Firebase Firestore):</strong> Display name,
         username, soccer username, selected favorite club, profile photo URL (if
         you upload one), user ID, and account creation metadata.
       </li>
-      <li>
+      <li id="li-2-3">
         <strong>User Content/Data You Provide:</strong> Profile photo uploads
         (stored in Firebase Storage).
       </li>
-      <li>
+      <li id="li-2-4">
         <strong>App Activity and Analytics (Firebase Analytics):</strong> Events
         such as screen views, login/sign-up method, content interactions, search
         terms, and quiz-related actions (e.g., quiz start, answers, score,
         completion timing).
       </li>
-      <li>
+      <li id="li-2-5">
         <strong>Technical/Device Data:</strong> App/runtime and device-level
         analytics data made available through Firebase Analytics in supported
         native environments.
       </li>
-      <li>
+      <li id="li-2-6">
         <strong>Content Requests:</strong> The app fetches public football/news
         content from the Engleski Fudbal WordPress API.
       </li>
     </ul>
 
-    <h2>3. How We Use Information</h2>
+    <h2 id="h2-3">3. How We Use Information</h2>
     <ul>
-      <li>To create and manage user accounts and authentication sessions.</li>
-      <li>
+      <li id="li-3-1">
+        To create and manage user accounts and authentication sessions.
+      </li>
+      <li id="li-3-2">
         To provide core features (profile, quiz participation and results,
         leaderboard-related experiences, content browsing).
       </li>
-      <li>
+      <li id="li-3-3">
         To personalize app experience (for example, favorite club features).
       </li>
-      <li>
+      <li id="li-3-4">
         To maintain service quality, monitor usage, and improve app
         functionality and performance.
       </li>
-      <li>
+      <li id="li-3-5">
         To support account security flows, including email verification and
         password reset.
       </li>
     </ul>
 
-    <h2>4. Legal Basis and Consent</h2>
-    <p>
+    <h2 id="h2-4">4. Legal Basis and Consent</h2>
+    <p id="p-4">
       We process data as needed to provide app functionality you request (for
       example, account login and profile services), for our legitimate interests
       in improving and securing the app, and based on your actions/consent where
       required by applicable law.
     </p>
 
-    <h2>5. Third-Party Services and Processing</h2>
-    <p>We use the following third-party services to operate the app:</p>
+    <h2 id="h2-5">5. Third-Party Services and Processing</h2>
+    <p id="p-5-1">
+      We use the following third-party services to operate the app:
+    </p>
     <ul>
-      <li>
+      <li id="li-5-1">
         <strong>Google Firebase</strong> (Authentication, Firestore, Storage,
         and Analytics).
       </li>
-      <li>
+      <li id="li-5-2">
         <strong>WordPress REST API</strong> (content retrieval from
         engleskifudbal.org).
       </li>
     </ul>
-    <p>
+    <p id="p-5-2">
       These providers process data under their own policies:
       <br />
       <a
+        id="google-policy-link"
         href="https://policies.google.com/privacy"
         target="_blank"
         rel="noopener noreferrer"
-        >Google Privacy Policy</a
       >
+        Google Privacy Policy
+      </a>
     </p>
 
-    <h2>6. Data Sharing</h2>
-    <p>
+    <h2 id="h2-6">6. Data Sharing</h2>
+    <p id="p-6">
       We do <strong>not</strong> sell your personal data. We may share data only
       with service providers necessary to run the app (such as Firebase), when
       required by law, or to protect rights, safety, and the integrity of the
       service.
     </p>
 
-    <h2>7. Data Retention</h2>
-    <p>
+    <h2 id="h2-7">7. Data Retention</h2>
+    <p id="p-7">
       We retain data for as long as necessary to provide app features, maintain
       legitimate business records, comply with legal obligations, and resolve
       disputes. Some data may remain until deletion is requested or technically
       removed through account/data deletion workflows.
     </p>
 
-    <h2>8. Your Rights and Choices</h2>
+    <h2 id="h2-8">8. Your Rights and Choices</h2>
     <ul>
-      <li>You can update certain profile information in the app.</li>
-      <li>
+      <li id="li-8-1">
+        You can update certain profile information in the app.
+      </li>
+      <li id="li-8-2">
         You can request account or data deletion by contacting us at
         <strong>engleski.fudbal@gmail.com</strong>.
       </li>
-      <li>
+      <li id="li-8-3">
         You can stop future collection of app data by uninstalling the app from
         your device.
       </li>
     </ul>
-    <p>
+    <p id="p-8">
       Note: uninstalling the app removes it from your device but may not
       automatically delete server-side account/profile records.
     </p>
 
-    <h2>9. Children's Privacy</h2>
-    <p>
+    <h2 id="h2-9">9. Children's Privacy</h2>
+    <p id="p-9">
       The app is not intended for children under the minimum age required by
       applicable local law without appropriate consent. If you believe a child
       has provided personal data inappropriately, contact us and we will review
       and delete data as required.
     </p>
 
-    <h2>10. Security</h2>
-    <p>
+    <h2 id="h2-10">10. Security</h2>
+    <p id="p-10">
       We use reasonable administrative and technical measures to help protect
       personal information. However, no method of transmission or storage is
       completely secure, and we cannot guarantee absolute security.
     </p>
 
-    <h2>11. International Data Transfers</h2>
-    <p>
+    <h2 id="h2-11">11. International Data Transfers</h2>
+    <p id="p-11">
       Your information may be processed in countries other than your own,
       including where our infrastructure or third-party providers operate. We
       take steps to use reputable providers and safeguards appropriate to
       applicable law.
     </p>
 
-    <h2>12. Changes to This Policy</h2>
-    <p>
+    <h2 id="h2-12">12. Changes to This Policy</h2>
+    <p id="p-12">
       We may update this Privacy Policy from time to time. We will post updates
       on this page and revise the “Last updated” date.
     </p>
 
-    <h2>13. Contact</h2>
-    <p>
+    <h2 id="h2-13">13. Contact</h2>
+    <p id="p-13">
       For privacy questions, requests, or deletion inquiries, contact:
       <br />
       <strong>Engleski Fudbal</strong><br />
       <strong>Email:</strong> engleski.fudbal@gmail.com
     </p>
+
+    <script>
+      const translations = {
+        en: {
+          title: "Privacy Policy",
+          lastUpdated: "<strong>Last updated:</strong> 2026-03-21",
+          intro:
+            'This Privacy Policy explains how <strong>Engleski Fudbal</strong> ("we", "our", or "us") collects, uses, and protects your information when you use the <strong>Engleski Fudbal</strong> mobile application.',
+          "h2-1": "1. Who We Are",
+          "p-1":
+            "App owner and legal entity: <strong>Engleski Fudbal</strong><br />Contact email: <strong>engleski.fudbal@gmail.com</strong>",
+          "h2-2": "2. Information We Collect",
+          "li-2-1":
+            "<strong>Account Information (Firebase Authentication):</strong> Email address, authentication identifiers, and account status (for example, whether your email is verified).",
+          "li-2-2":
+            "<strong>Profile Information (Firebase Firestore):</strong> Display name, username, soccer username, selected favorite club, profile photo URL (if you upload one), user ID, and account creation metadata.",
+          "li-2-3":
+            "<strong>User Content/Data You Provide:</strong> Profile photo uploads (stored in Firebase Storage).",
+          "li-2-4":
+            "<strong>App Activity and Analytics (Firebase Analytics):</strong> Events such as screen views, login/sign-up method, content interactions, search terms, and quiz-related actions (e.g., quiz start, answers, score, completion timing).",
+          "li-2-5":
+            "<strong>Technical/Device Data:</strong> App/runtime and device-level analytics data made available through Firebase Analytics in supported native environments.",
+          "li-2-6":
+            "<strong>Content Requests:</strong> The app fetches public football/news content from the Engleski Fudbal WordPress API.",
+          "h2-3": "3. How We Use Information",
+          "li-3-1":
+            "To create and manage user accounts and authentication sessions.",
+          "li-3-2":
+            "To provide core features (profile, quiz participation and results, leaderboard-related experiences, content browsing).",
+          "li-3-3":
+            "To personalize app experience (for example, favorite club features).",
+          "li-3-4":
+            "To maintain service quality, monitor usage, and improve app functionality and performance.",
+          "li-3-5":
+            "To support account security flows, including email verification and password reset.",
+          "h2-4": "4. Legal Basis and Consent",
+          "p-4":
+            "We process data as needed to provide app functionality you request (for example, account login and profile services), for our legitimate interests in improving and securing the app, and based on your actions/consent where required by applicable law.",
+          "h2-5": "5. Third-Party Services and Processing",
+          "p-5-1":
+            "We use the following third-party services to operate the app:",
+          "li-5-1":
+            "<strong>Google Firebase</strong> (Authentication, Firestore, Storage, and Analytics).",
+          "li-5-2":
+            "<strong>WordPress REST API</strong> (content retrieval from engleskifudbal.org).",
+          "p-5-2":
+            'These providers process data under their own policies:<br /><a id="google-policy-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>',
+          "h2-6": "6. Data Sharing",
+          "p-6":
+            "We do <strong>not</strong> sell your personal data. We may share data only with service providers necessary to run the app (such as Firebase), when required by law, or to protect rights, safety, and the integrity of the service.",
+          "h2-7": "7. Data Retention",
+          "p-7":
+            "We retain data for as long as necessary to provide app features, maintain legitimate business records, comply with legal obligations, and resolve disputes. Some data may remain until deletion is requested or technically removed through account/data deletion workflows.",
+          "h2-8": "8. Your Rights and Choices",
+          "li-8-1": "You can update certain profile information in the app.",
+          "li-8-2":
+            "You can request account or data deletion by contacting us at <strong>engleski.fudbal@gmail.com</strong>.",
+          "li-8-3":
+            "You can stop future collection of app data by uninstalling the app from your device.",
+          "p-8":
+            "Note: uninstalling the app removes it from your device but may not automatically delete server-side account/profile records.",
+          "h2-9": "9. Children's Privacy",
+          "p-9":
+            "The app is not intended for children under the minimum age required by applicable local law without appropriate consent. If you believe a child has provided personal data inappropriately, contact us and we will review and delete data as required.",
+          "h2-10": "10. Security",
+          "p-10":
+            "We use reasonable administrative and technical measures to help protect personal information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.",
+          "h2-11": "11. International Data Transfers",
+          "p-11":
+            "Your information may be processed in countries other than your own, including where our infrastructure or third-party providers operate. We take steps to use reputable providers and safeguards appropriate to applicable law.",
+          "h2-12": "12. Changes to This Policy",
+          "p-12":
+            "We may update this Privacy Policy from time to time. We will post updates on this page and revise the “Last updated” date.",
+          "h2-13": "13. Contact",
+          "p-13":
+            "For privacy questions, requests, or deletion inquiries, contact:<br /><strong>Engleski Fudbal</strong><br /><strong>Email:</strong> engleski.fudbal@gmail.com",
+          "btn-en": "English",
+          "btn-sr": "Srpski",
+        },
+        sr: {
+          title: "Politika privatnosti",
+          lastUpdated: "<strong>Poslednje ažuriranje:</strong> 2026-03-21",
+          intro:
+            'Ova Politika privatnosti objašnjava kako <strong>Engleski Fudbal</strong> ("mi", "naš", "nas") prikuplja, koristi i štiti vaše podatke kada koristite mobilnu aplikaciju <strong>Engleski Fudbal</strong>.',
+          "h2-1": "1. Ko smo mi",
+          "p-1":
+            "Vlasnik aplikacije i pravno lice: <strong>Engleski Fudbal</strong><br />Kontakt email: <strong>engleski.fudbal@gmail.com</strong>",
+          "h2-2": "2. Podaci koje prikupljamo",
+          "li-2-1":
+            "<strong>Podaci o nalogu (Firebase Authentication):</strong> Email adresa, identifikatori za autentifikaciju i status naloga (na primer, da li je email verifikovan).",
+          "li-2-2":
+            "<strong>Podaci o profilu (Firebase Firestore):</strong> Prikazano ime, korisničko ime, soccer korisničko ime, izabrani omiljeni klub, URL profilne fotografije (ako je otpremite), korisnički ID i metapodaci o kreiranju naloga.",
+          "li-2-3":
+            "<strong>Korisnički sadržaj/podaci koje dostavite:</strong> Otpremanje profilne fotografije (čuva se u Firebase Storage).",
+          "li-2-4":
+            "<strong>Aktivnost u aplikaciji i analitika (Firebase Analytics):</strong> Događaji kao što su prikazi ekrana, način prijave/registracije, interakcije sa sadržajem, pojmovi pretrage i radnje vezane za kviz (npr. početak kviza, odgovori, rezultat, vreme završetka).",
+          "li-2-5":
+            "<strong>Tehnički/podaci o uređaju:</strong> Podaci o aplikaciji/izvršavanju i analitika na nivou uređaja dostupni kroz Firebase Analytics u podržanim nativnim okruženjima.",
+          "li-2-6":
+            "<strong>Zahtevi za sadržaj:</strong> Aplikacija preuzima javni fudbalski/novinski sadržaj sa Engleski Fudbal WordPress API-ja.",
+          "h2-3": "3. Kako koristimo podatke",
+          "li-3-1":
+            "Za kreiranje i upravljanje korisničkim nalozima i sesijama prijave.",
+          "li-3-2":
+            "Za pružanje osnovnih funkcija (profil, učešće u kvizu i rezultati, iskustva vezana za rang listu, pregled sadržaja).",
+          "li-3-3":
+            "Za personalizaciju iskustva u aplikaciji (na primer, funkcije omiljenog kluba).",
+          "li-3-4":
+            "Za održavanje kvaliteta usluge, praćenje korišćenja i unapređenje funkcionalnosti i performansi aplikacije.",
+          "li-3-5":
+            "Za podršku bezbednosnim procesima naloga, uključujući verifikaciju emaila i reset lozinke.",
+          "h2-4": "4. Pravni osnov i saglasnost",
+          "p-4":
+            "Podatke obrađujemo kada je to potrebno za pružanje funkcionalnosti aplikacije koje zahtevate (na primer, prijava na nalog i usluge profila), radi naših legitimnih interesa za unapređenje i zaštitu aplikacije, i na osnovu vaših radnji/saglasnosti kada to zahteva važeći zakon.",
+          "h2-5": "5. Usluge trećih strana i obrada",
+          "p-5-1": "Za rad aplikacije koristimo sledeće usluge trećih strana:",
+          "li-5-1":
+            "<strong>Google Firebase</strong> (Authentication, Firestore, Storage i Analytics).",
+          "li-5-2":
+            "<strong>WordPress REST API</strong> (preuzimanje sadržaja sa engleskifudbal.org).",
+          "p-5-2":
+            'Ovi pružaoci obrađuju podatke prema svojim pravilima:<br /><a id="google-policy-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Politika privatnosti</a>',
+          "h2-6": "6. Deljenje podataka",
+          "p-6":
+            "<strong>Ne</strong> prodajemo vaše lične podatke. Podatke možemo deliti samo sa pružaocima usluga neophodnim za rad aplikacije (kao što je Firebase), kada to zahteva zakon, ili radi zaštite prava, bezbednosti i integriteta usluge.",
+          "h2-7": "7. Čuvanje podataka",
+          "p-7":
+            "Podatke čuvamo onoliko dugo koliko je potrebno za pružanje funkcija aplikacije, vođenje legitimne poslovne evidencije, ispunjavanje zakonskih obaveza i rešavanje sporova. Neki podaci mogu ostati dok se ne zatraži brisanje ili tehnički ne uklone kroz procese brisanja naloga/podataka.",
+          "h2-8": "8. Vaša prava i izbori",
+          "li-8-1": "Određene podatke profila možete ažurirati u aplikaciji.",
+          "li-8-2":
+            "Možete zatražiti brisanje naloga ili podataka tako što ćete nas kontaktirati na <strong>engleski.fudbal@gmail.com</strong>.",
+          "li-8-3":
+            "Možete zaustaviti buduće prikupljanje podataka aplikacije deinstaliranjem aplikacije sa uređaja.",
+          "p-8":
+            "Napomena: deinstalacija aplikacije je uklanja sa vašeg uređaja, ali možda neće automatski obrisati zapise naloga/profila sa serverske strane.",
+          "h2-9": "9. Privatnost dece",
+          "p-9":
+            "Aplikacija nije namenjena deci ispod minimalnog uzrasta propisanog važećim lokalnim zakonom bez odgovarajuće saglasnosti. Ako verujete da je dete neprimereno dostavilo lične podatke, kontaktirajte nas i proverićemo i obrisati podatke u skladu sa zakonom.",
+          "h2-10": "10. Bezbednost",
+          "p-10":
+            "Koristimo razumne administrativne i tehničke mere za zaštitu ličnih podataka. Ipak, nijedan način prenosa ili skladištenja nije potpuno bezbedan i ne možemo garantovati apsolutnu bezbednost.",
+          "h2-11": "11. Međunarodni prenos podataka",
+          "p-11":
+            "Vaši podaci mogu biti obrađivani u zemljama koje nisu vaša, uključujući mesta gde posluje naša infrastruktura ili pružaoci usluga trećih strana. Preduzimamo korake da koristimo pouzdane pružaoce usluga i zaštitne mere u skladu sa važećim zakonom.",
+          "h2-12": "12. Izmene ove politike",
+          "p-12":
+            "Možemo povremeno ažurirati ovu Politiku privatnosti. Ažuriranja ćemo objaviti na ovoj stranici i izmeniti datum „Poslednje ažuriranje“.",
+          "h2-13": "13. Kontakt",
+          "p-13":
+            "Za pitanja o privatnosti, zahteve ili upite za brisanje, kontaktirajte:<br /><strong>Engleski Fudbal</strong><br /><strong>Email:</strong> engleski.fudbal@gmail.com",
+          "btn-en": "English",
+          "btn-sr": "Srpski",
+        },
+      };
+
+      const translatableIds = [
+        "title",
+        "lastUpdated",
+        "intro",
+        "h2-1",
+        "p-1",
+        "h2-2",
+        "li-2-1",
+        "li-2-2",
+        "li-2-3",
+        "li-2-4",
+        "li-2-5",
+        "li-2-6",
+        "h2-3",
+        "li-3-1",
+        "li-3-2",
+        "li-3-3",
+        "li-3-4",
+        "li-3-5",
+        "h2-4",
+        "p-4",
+        "h2-5",
+        "p-5-1",
+        "li-5-1",
+        "li-5-2",
+        "p-5-2",
+        "h2-6",
+        "p-6",
+        "h2-7",
+        "p-7",
+        "h2-8",
+        "li-8-1",
+        "li-8-2",
+        "li-8-3",
+        "p-8",
+        "h2-9",
+        "p-9",
+        "h2-10",
+        "p-10",
+        "h2-11",
+        "p-11",
+        "h2-12",
+        "p-12",
+        "h2-13",
+        "p-13",
+        "btn-en",
+        "btn-sr",
+      ];
+
+      function setLanguage(lang) {
+        const map = translations[lang];
+        translatableIds.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && map[id] !== undefined) {
+            el.innerHTML = map[id];
+          }
+        });
+
+        document.documentElement.lang = lang === "sr" ? "sr" : "en";
+
+        const btnEn = document.getElementById("btn-en");
+        const btnSr = document.getElementById("btn-sr");
+        btnEn.classList.toggle("active", lang === "en");
+        btnSr.classList.toggle("active", lang === "sr");
+      }
+
+      document
+        .getElementById("btn-en")
+        .addEventListener("click", () => setLanguage("en"));
+      document
+        .getElementById("btn-sr")
+        .addEventListener("click", () => setLanguage("sr"));
+    </script>
   </body>
 </html>
