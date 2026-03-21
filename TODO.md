@@ -6,4 +6,9 @@
 - [x] Upgrade headings, paragraphs, lists, and links for premium readability
 - [x] Add responsive behavior for mobile/tablet breakpoints
 - [x] Add accessible focus-visible styles for interactive elements
-- [ ] Run a final visual consistency pass
+- [x] Add semantic `<strong>` emphasis for user-notice statements in static English policy text
+- [x] Mirror `<strong>` emphasis updates in `translations.en`
+- [x] Mirror equivalent `<strong>` emphasis updates in `translations.sr`
+- [ ] Run bilingual consistency pass for emphasized notices
+- [x] Add Engleski Fudbal logo near top section
+- [x] Add responsive styling for logo display
