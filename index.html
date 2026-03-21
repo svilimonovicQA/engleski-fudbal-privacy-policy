@@ -5,231 +5,408 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - Engleski Fudbal</title>
     <style>
+      :root {
+        --bg-1: #0b1220;
+        --bg-2: #101a2f;
+        --surface: rgba(255, 255, 255, 0.9);
+        --surface-border: rgba(255, 255, 255, 0.45);
+        --text: #111827;
+        --muted: #5b6475;
+        --primary: #2563eb;
+        --primary-strong: #1d4ed8;
+        --ring: rgba(37, 99, 235, 0.35);
+        --shadow: 0 20px 55px rgba(4, 14, 37, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
       body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 0 16px;
-        color: #222;
+        margin: 0;
+        padding: 0;
       }
-      h1,
-      h2 {
-        color: #111;
+
+      body {
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.75;
+        color: var(--text);
+        background:
+          radial-gradient(
+            1200px 500px at -10% -20%,
+            #1d4ed8 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            1000px 500px at 110% -20%,
+            #0ea5e9 0%,
+            transparent 55%
+          ),
+          linear-gradient(160deg, var(--bg-1), var(--bg-2));
+        min-height: 100vh;
+        padding: clamp(18px, 3.5vw, 38px);
       }
-      .muted {
-        color: #666;
-        font-size: 0.95rem;
+
+      .policy-shell {
+        max-width: 980px;
+        margin: 0 auto;
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        overflow: hidden;
       }
-      a {
-        color: #0b57d0;
-      }
-      .lang-switcher {
+
+      .policy-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
         display: flex;
-        gap: 8px;
-        margin-bottom: 20px;
+        justify-content: flex-end;
+        padding: 16px 20px;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 255, 255, 0.84)
+        );
+        border-bottom: 1px solid rgba(17, 24, 39, 0.08);
       }
+
+      .policy-content {
+        padding: clamp(20px, 4vw, 42px);
+      }
+
+      #title,
+      #lastUpdated,
+      #intro {
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: #0f172a;
+      }
+
+      h2 {
+        margin: 30px 0 12px;
+        font-size: clamp(1.15rem, 2.3vw, 1.42rem);
+        line-height: 1.3;
+        color: #0f172a;
+        padding: 10px 14px;
+        border-left: 4px solid rgba(37, 99, 235, 0.35);
+        background: linear-gradient(
+          to right,
+          rgba(37, 99, 235, 0.08),
+          rgba(37, 99, 235, 0.02)
+        );
+        border-radius: 10px;
+      }
+
+      p,
+      li {
+        font-size: 1rem;
+        color: #1f2937;
+      }
+
+      p {
+        margin: 10px 0 14px;
+      }
+
+      ul {
+        margin: 6px 0 18px;
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin: 0.5rem 0;
+        padding-left: 0.15rem;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      a {
+        color: var(--primary);
+        text-underline-offset: 2px;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--primary-strong);
+      }
+
+      .lang-switcher {
+        display: inline-flex;
+        gap: 10px;
+        padding: 6px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.06);
+        border: 1px solid rgba(15, 23, 42, 0.08);
+      }
+
       .lang-btn {
-        border: 1px solid #ccc;
-        background: #fff;
-        color: #222;
-        padding: 6px 12px;
-        border-radius: 6px;
+        border: 1px solid transparent;
+        background: transparent;
+        color: #23314f;
+        padding: 9px 16px;
+        border-radius: 999px;
         cursor: pointer;
-        font-size: 0.95rem;
-      }
-      .lang-btn.active {
-        border-color: #0b57d0;
-        background: #eaf1ff;
-        color: #0b57d0;
+        font-size: 0.94rem;
         font-weight: 600;
+        letter-spacing: 0.01em;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .lang-btn:hover {
+        background: rgba(37, 99, 235, 0.08);
+        color: #13378f;
+      }
+
+      .lang-btn.active {
+        border-color: rgba(37, 99, 235, 0.35);
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28);
+      }
+
+      .lang-btn:focus-visible,
+      a:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 4px var(--ring);
+        border-radius: 10px;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 12px;
+        }
+
+        .policy-shell {
+          border-radius: 16px;
+        }
+
+        .policy-header {
+          padding: 12px;
+        }
+
+        .policy-content {
+          padding: 16px;
+        }
+
+        .lang-btn {
+          padding: 8px 13px;
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="lang-switcher">
-      <button id="btn-en" class="lang-btn active" type="button">English</button>
-      <button id="btn-sr" class="lang-btn" type="button">Srpski</button>
-    </div>
+    <main class="policy-shell">
+      <header class="policy-header">
+        <div class="lang-switcher">
+          <button id="btn-en" class="lang-btn active" type="button">
+            English
+          </button>
+          <button id="btn-sr" class="lang-btn" type="button">Srpski</button>
+        </div>
+      </header>
 
-    <h1 id="title">Privacy Policy</h1>
-    <p id="lastUpdated" class="muted">
-      <strong>Last updated:</strong> 2026-03-21
-    </p>
+      <section class="policy-content">
+        <h1 id="title">Privacy Policy</h1>
+        <p id="lastUpdated" class="muted">
+          <strong>Last updated:</strong> 2026-03-21
+        </p>
 
-    <p id="intro">
-      This Privacy Policy explains how <strong>Engleski Fudbal</strong> ("we",
-      "our", or "us") collects, uses, and protects your information when you use
-      the <strong>Engleski Fudbal</strong> mobile application.
-    </p>
+        <p id="intro">
+          This Privacy Policy explains how
+          <strong>Engleski Fudbal</strong> ("we", "our", or "us") collects,
+          uses, and protects your information when you use the
+          <strong>Engleski Fudbal</strong> mobile application.
+        </p>
 
-    <h2 id="h2-1">1. Who We Are</h2>
-    <p id="p-1">
-      App owner and legal entity: <strong>Engleski Fudbal</strong><br />
-      Contact email: <strong>engleski.fudbal@gmail.com</strong>
-    </p>
+        <h2 id="h2-1">1. Who We Are</h2>
+        <p id="p-1">
+          App owner and legal entity: <strong>Engleski Fudbal</strong><br />
+          Contact email: <strong>engleski.fudbal@gmail.com</strong>
+        </p>
 
-    <h2 id="h2-2">2. Information We Collect</h2>
-    <ul>
-      <li id="li-2-1">
-        <strong>Account Information (Firebase Authentication):</strong> Email
-        address, authentication identifiers, and account status (for example,
-        whether your email is verified).
-      </li>
-      <li id="li-2-2">
-        <strong>Profile Information (Firebase Firestore):</strong> Display name,
-        username, soccer username, selected favorite club, profile photo URL (if
-        you upload one), user ID, and account creation metadata.
-      </li>
-      <li id="li-2-3">
-        <strong>User Content/Data You Provide:</strong> Profile photo uploads
-        (stored in Firebase Storage).
-      </li>
-      <li id="li-2-4">
-        <strong>App Activity and Analytics (Firebase Analytics):</strong> Events
-        such as screen views, login/sign-up method, content interactions, search
-        terms, and quiz-related actions (e.g., quiz start, answers, score,
-        completion timing).
-      </li>
-      <li id="li-2-5">
-        <strong>Technical/Device Data:</strong> App/runtime and device-level
-        analytics data made available through Firebase Analytics in supported
-        native environments.
-      </li>
-      <li id="li-2-6">
-        <strong>Content Requests:</strong> The app fetches public football/news
-        content from the Engleski Fudbal WordPress API.
-      </li>
-    </ul>
+        <h2 id="h2-2">2. Information We Collect</h2>
+        <ul>
+          <li id="li-2-1">
+            <strong>Account Information (Firebase Authentication):</strong>
+            Email address, authentication identifiers, and account status (for
+            example, whether your email is verified).
+          </li>
+          <li id="li-2-2">
+            <strong>Profile Information (Firebase Firestore):</strong> Display
+            name, username, soccer username, selected favorite club, profile
+            photo URL (if you upload one), user ID, and account creation
+            metadata.
+          </li>
+          <li id="li-2-3">
+            <strong>User Content/Data You Provide:</strong> Profile photo
+            uploads (stored in Firebase Storage).
+          </li>
+          <li id="li-2-4">
+            <strong>App Activity and Analytics (Firebase Analytics):</strong>
+            Events such as screen views, login/sign-up method, content
+            interactions, search terms, and quiz-related actions (e.g., quiz
+            start, answers, score, completion timing).
+          </li>
+          <li id="li-2-5">
+            <strong>Technical/Device Data:</strong> App/runtime and device-level
+            analytics data made available through Firebase Analytics in
+            supported native environments.
+          </li>
+          <li id="li-2-6">
+            <strong>Content Requests:</strong> The app fetches public
+            football/news content from the Engleski Fudbal WordPress API.
+          </li>
+        </ul>
 
-    <h2 id="h2-3">3. How We Use Information</h2>
-    <ul>
-      <li id="li-3-1">
-        To create and manage user accounts and authentication sessions.
-      </li>
-      <li id="li-3-2">
-        To provide core features (profile, quiz participation and results,
-        leaderboard-related experiences, content browsing).
-      </li>
-      <li id="li-3-3">
-        To personalize app experience (for example, favorite club features).
-      </li>
-      <li id="li-3-4">
-        To maintain service quality, monitor usage, and improve app
-        functionality and performance.
-      </li>
-      <li id="li-3-5">
-        To support account security flows, including email verification and
-        password reset.
-      </li>
-    </ul>
+        <h2 id="h2-3">3. How We Use Information</h2>
+        <ul>
+          <li id="li-3-1">
+            To create and manage user accounts and authentication sessions.
+          </li>
+          <li id="li-3-2">
+            To provide core features (profile, quiz participation and results,
+            leaderboard-related experiences, content browsing).
+          </li>
+          <li id="li-3-3">
+            To personalize app experience (for example, favorite club features).
+          </li>
+          <li id="li-3-4">
+            To maintain service quality, monitor usage, and improve app
+            functionality and performance.
+          </li>
+          <li id="li-3-5">
+            To support account security flows, including email verification and
+            password reset.
+          </li>
+        </ul>
 
-    <h2 id="h2-4">4. Legal Basis and Consent</h2>
-    <p id="p-4">
-      We process data as needed to provide app functionality you request (for
-      example, account login and profile services), for our legitimate interests
-      in improving and securing the app, and based on your actions/consent where
-      required by applicable law.
-    </p>
+        <h2 id="h2-4">4. Legal Basis and Consent</h2>
+        <p id="p-4">
+          We process data as needed to provide app functionality you request
+          (for example, account login and profile services), for our legitimate
+          interests in improving and securing the app, and based on your
+          actions/consent where required by applicable law.
+        </p>
 
-    <h2 id="h2-5">5. Third-Party Services and Processing</h2>
-    <p id="p-5-1">
-      We use the following third-party services to operate the app:
-    </p>
-    <ul>
-      <li id="li-5-1">
-        <strong>Google Firebase</strong> (Authentication, Firestore, Storage,
-        and Analytics).
-      </li>
-      <li id="li-5-2">
-        <strong>WordPress REST API</strong> (content retrieval from
-        engleskifudbal.org).
-      </li>
-    </ul>
-    <p id="p-5-2">
-      These providers process data under their own policies:
-      <br />
-      <a
-        id="google-policy-link"
-        href="https://policies.google.com/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Google Privacy Policy
-      </a>
-    </p>
+        <h2 id="h2-5">5. Third-Party Services and Processing</h2>
+        <p id="p-5-1">
+          We use the following third-party services to operate the app:
+        </p>
+        <ul>
+          <li id="li-5-1">
+            <strong>Google Firebase</strong> (Authentication, Firestore,
+            Storage, and Analytics).
+          </li>
+          <li id="li-5-2">
+            <strong>WordPress REST API</strong> (content retrieval from
+            engleskifudbal.org).
+          </li>
+        </ul>
+        <p id="p-5-2">
+          These providers process data under their own policies:
+          <br />
+          <a
+            id="google-policy-link"
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Privacy Policy
+          </a>
+        </p>
 
-    <h2 id="h2-6">6. Data Sharing</h2>
-    <p id="p-6">
-      We do <strong>not</strong> sell your personal data. We may share data only
-      with service providers necessary to run the app (such as Firebase), when
-      required by law, or to protect rights, safety, and the integrity of the
-      service.
-    </p>
+        <h2 id="h2-6">6. Data Sharing</h2>
+        <p id="p-6">
+          We do <strong>not</strong> sell your personal data. We may share data
+          only with service providers necessary to run the app (such as
+          Firebase), when required by law, or to protect rights, safety, and the
+          integrity of the service.
+        </p>
 
-    <h2 id="h2-7">7. Data Retention</h2>
-    <p id="p-7">
-      We retain data for as long as necessary to provide app features, maintain
-      legitimate business records, comply with legal obligations, and resolve
-      disputes. Some data may remain until deletion is requested or technically
-      removed through account/data deletion workflows.
-    </p>
+        <h2 id="h2-7">7. Data Retention</h2>
+        <p id="p-7">
+          We retain data for as long as necessary to provide app features,
+          maintain legitimate business records, comply with legal obligations,
+          and resolve disputes. Some data may remain until deletion is requested
+          or technically removed through account/data deletion workflows.
+        </p>
 
-    <h2 id="h2-8">8. Your Rights and Choices</h2>
-    <ul>
-      <li id="li-8-1">
-        You can update certain profile information in the app.
-      </li>
-      <li id="li-8-2">
-        You can request account or data deletion by contacting us at
-        <strong>engleski.fudbal@gmail.com</strong>.
-      </li>
-      <li id="li-8-3">
-        You can stop future collection of app data by uninstalling the app from
-        your device.
-      </li>
-    </ul>
-    <p id="p-8">
-      Note: uninstalling the app removes it from your device but may not
-      automatically delete server-side account/profile records.
-    </p>
+        <h2 id="h2-8">8. Your Rights and Choices</h2>
+        <ul>
+          <li id="li-8-1">
+            You can update certain profile information in the app.
+          </li>
+          <li id="li-8-2">
+            You can request account or data deletion by contacting us at
+            <strong>engleski.fudbal@gmail.com</strong>.
+          </li>
+          <li id="li-8-3">
+            You can stop future collection of app data by uninstalling the app
+            from your device.
+          </li>
+        </ul>
+        <p id="p-8">
+          Note: uninstalling the app removes it from your device but may not
+          automatically delete server-side account/profile records.
+        </p>
 
-    <h2 id="h2-9">9. Children's Privacy</h2>
-    <p id="p-9">
-      The app is not intended for children under the minimum age required by
-      applicable local law without appropriate consent. If you believe a child
-      has provided personal data inappropriately, contact us and we will review
-      and delete data as required.
-    </p>
+        <h2 id="h2-9">9. Children's Privacy</h2>
+        <p id="p-9">
+          The app is not intended for children under the minimum age required by
+          applicable local law without appropriate consent. If you believe a
+          child has provided personal data inappropriately, contact us and we
+          will review and delete data as required.
+        </p>
 
-    <h2 id="h2-10">10. Security</h2>
-    <p id="p-10">
-      We use reasonable administrative and technical measures to help protect
-      personal information. However, no method of transmission or storage is
-      completely secure, and we cannot guarantee absolute security.
-    </p>
+        <h2 id="h2-10">10. Security</h2>
+        <p id="p-10">
+          We use reasonable administrative and technical measures to help
+          protect personal information. However, no method of transmission or
+          storage is completely secure, and we cannot guarantee absolute
+          security.
+        </p>
 
-    <h2 id="h2-11">11. International Data Transfers</h2>
-    <p id="p-11">
-      Your information may be processed in countries other than your own,
-      including where our infrastructure or third-party providers operate. We
-      take steps to use reputable providers and safeguards appropriate to
-      applicable law.
-    </p>
+        <h2 id="h2-11">11. International Data Transfers</h2>
+        <p id="p-11">
+          Your information may be processed in countries other than your own,
+          including where our infrastructure or third-party providers operate.
+          We take steps to use reputable providers and safeguards appropriate to
+          applicable law.
+        </p>
 
-    <h2 id="h2-12">12. Changes to This Policy</h2>
-    <p id="p-12">
-      We may update this Privacy Policy from time to time. We will post updates
-      on this page and revise the “Last updated” date.
-    </p>
+        <h2 id="h2-12">12. Changes to This Policy</h2>
+        <p id="p-12">
+          We may update this Privacy Policy from time to time. We will post
+          updates on this page and revise the “Last updated” date.
+        </p>
 
-    <h2 id="h2-13">13. Contact</h2>
-    <p id="p-13">
-      For privacy questions, requests, or deletion inquiries, contact:
-      <br />
-      <strong>Engleski Fudbal</strong><br />
-      <strong>Email:</strong> engleski.fudbal@gmail.com
-    </p>
+        <h2 id="h2-13">13. Contact</h2>
+        <p id="p-13">
+          For privacy questions, requests, or deletion inquiries, contact:
+          <br />
+          <strong>Engleski Fudbal</strong><br />
+          <strong>Email:</strong> engleski.fudbal@gmail.com
+        </p>
+      </section>
+    </main>
 
     <script>
       const translations = {
@@ -279,7 +456,7 @@
             'These providers process data under their own policies:<br /><a id="google-policy-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>',
           "h2-6": "6. Data Sharing",
           "p-6":
-            "We do <strong>not</strong> sell your personal data. We may share data only with service providers necessary to run the app (such as Firebase), when required by law, or to protect rights, safety, and the integrity of the service.",
+            "We <strong>do not sell</strong> your personal data. We may share data only with service providers necessary to run the app (such as Firebase), when required by law, or to protect rights, safety, and the integrity of the service.",
           "h2-7": "7. Data Retention",
           "p-7":
             "We retain data for as long as necessary to provide app features, maintain legitimate business records, comply with legal obligations, and resolve disputes. Some data may remain until deletion is requested or technically removed through account/data deletion workflows.",
@@ -354,7 +531,7 @@
             'Ovi pružaoci obrađuju podatke prema svojim pravilima:<br /><a id="google-policy-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Politika privatnosti</a>',
           "h2-6": "6. Deljenje podataka",
           "p-6":
-            "<strong>Ne</strong> prodajemo vaše lične podatke. Podatke možemo deliti samo sa pružaocima usluga neophodnim za rad aplikacije (kao što je Firebase), kada to zahteva zakon, ili radi zaštite prava, bezbednosti i integriteta usluge.",
+            "<strong>Ne prodajemo</strong> vaše lične podatke. Podatke možemo deliti samo sa pružaocima usluga neophodnim za rad aplikacije (kao što je Firebase), kada to zahteva zakon, ili radi zaštite prava, bezbednosti i integriteta usluge.",
           "h2-7": "7. Čuvanje podataka",
           "p-7":
             "Podatke čuvamo onoliko dugo koliko je potrebno za pružanje funkcija aplikacije, vođenje legitimne poslovne evidencije, ispunjavanje zakonskih obaveza i rešavanje sporova. Neki podaci mogu ostati dok se ne zatraži brisanje ili tehnički ne uklone kroz procese brisanja naloga/podataka.",
