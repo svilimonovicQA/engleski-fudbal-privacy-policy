@@ -44,6 +44,7 @@
             transparent 55%
           ),
           linear-gradient(160deg, var(--bg-1), var(--bg-2));
+        background-attachment: fixed;
         min-height: 100vh;
         padding: clamp(18px, 3.5vw, 38px);
       }
@@ -202,14 +203,20 @@
       @media (max-width: 640px) {
         body {
           padding: 12px;
+          background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
+          background-attachment: scroll;
         }
 
         .policy-shell {
           border-radius: 16px;
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
         }
 
         .policy-header {
+          position: static;
           padding: 12px;
+          background: rgba(255, 255, 255, 0.96);
         }
 
         .policy-content {
@@ -219,6 +226,30 @@
         .lang-btn {
           padding: 8px 13px;
           font-size: 0.9rem;
+          transition:
+            background 0.15s ease,
+            color 0.15s ease;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+
+        body {
+          background-attachment: scroll;
+        }
+
+        .policy-shell {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+        }
+
+        .policy-header {
+          position: static;
         }
       }
     </style>
@@ -227,10 +258,10 @@
     <main class="policy-shell">
       <header class="policy-header">
         <div class="lang-switcher">
-          <button id="btn-en" class="lang-btn active" type="button">
-            English
+          <button id="btn-en" class="lang-btn" type="button">English</button>
+          <button id="btn-sr" class="lang-btn active" type="button">
+            Srpski
           </button>
-          <button id="btn-sr" class="lang-btn" type="button">Srpski</button>
         </div>
       </header>
 
@@ -661,6 +692,8 @@
       document
         .getElementById("btn-sr")
         .addEventListener("click", () => setLanguage("sr"));
+
+      setLanguage("sr");
     </script>
   </body>
 </html>

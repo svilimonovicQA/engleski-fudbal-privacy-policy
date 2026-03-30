@@ -12,3 +12,6 @@
 - [ ] Run bilingual consistency pass for emphasized notices
 - [x] Add Engleski Fudbal logo near top section
 - [x] Add responsive styling for logo display
+- [x] Optimize mobile rendering to reduce page blinking/flicker
+- [x] Set default language to Srpski on initial page load
+- [x] Add mobile/reduced-motion visual fallbacks for smoother performance
